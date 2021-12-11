@@ -2,12 +2,17 @@
   "name": "scheduler",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8001",
   "dependencies": {
-    "classnames": "^2.2.6",
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "jest": "^26.6.0",
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.0.0"
+    "react-hooks-testing-library": "^0.6.0",
+    "react-scripts": "^4.0.3",
+    "react-test-renderer": "^16.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,21 +35,13 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
     "@storybook/addon-actions": "^5.0.10",
     "@storybook/addon-backgrounds": "^5.0.10",
     "@storybook/addon-links": "^5.0.10",
     "@storybook/addons": "^5.0.10",
-    "@storybook/react": "^5.0.10",
-    "@testing-library/jest-dom": "^4.0.0",
-    "@testing-library/react": "^8.0.7",
-    "babel-loader": "^8.0.5",
-    "node-sass": "^4.14.0"
-  },
-  "jest": {
-    "watchPathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "<rootDir>/.git/"
-    ]
+    "@storybook/react": "^6.3.12",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "node-sass": "^6.0.1"
   }
 }
