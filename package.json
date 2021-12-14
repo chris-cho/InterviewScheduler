@@ -6,7 +6,6 @@
   "dependencies": {
     "axios": "^0.24.0",
     "classnames": "^2.3.1",
-    "jest": "^26.6.0",
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

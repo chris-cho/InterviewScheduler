@@ -11,7 +11,6 @@ export default function Application() {
     setDay,
     bookInterview,
     cancelInterview,
-    updateSpots
   } = useApplicationData();
 
   const interviewers = getInterviewersForDay(state, state.day);

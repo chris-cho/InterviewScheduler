@@ -24,13 +24,12 @@ export function getInterview(state, interview) {
 }
 
 export function getInterviewersForDay(state, day){
+  let interviewers = [];
   if(day && state.days.length){
-    let interviewers = [];
     const selectedDay = state.days.find(days=> days.name === day);
-    if(selectedDay && selectedDay != undefined){
-      interviewers = (selectedDay.appointments.map((id) => state.appointments[id.toString()]))
+  if(selectedDay && selectedDay.interviewers !== undefined){
+    interviewers = selectedDay.interviewers.map((id) => state.interviewers[id.toString()])
     }
-    return interviewers;
   }
-  return [];
+  return interviewers;
 }
