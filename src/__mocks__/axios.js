@@ -85,14 +85,14 @@ export default {
     return Promise.resolve({data:{}});
   }),
 
-  put: jest.fn(()=>{
+  put: (()=>{
     return Promise.resolve({
       status: 204,
       statusText: "No Content"
     })
   }),
 
-  delete: jest.fn(()=>{
+  delete: (()=>{
     return Promise.resolve({
       status: 204,
       statusText: "No Content"

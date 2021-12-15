@@ -58,7 +58,7 @@ export default function Appointment(props){
         <Empty onAdd={() => transition(CREATE)} />}
       {mode === SAVING && (
         <Status
-          message={"Loading"}/>
+          message={"Saving"}/>
       )}
       {mode === SHOW && (
         <Show

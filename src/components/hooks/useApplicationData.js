@@ -14,7 +14,6 @@ export default function useApplicationData(initial) {
           setState(prev => ({...prev, days: all[0].data, appointments: all[1].data, interviewers: all[2].data, day: "Monday"}))
         })
         .catch(e => console.log(e))
-        
       }, []);
 
   const setDay = day => setState({ ...state, day });
@@ -56,7 +55,6 @@ export default function useApplicationData(initial) {
   const updateSpots = (action) => {
     const index = state.days.findIndex(index => index.name === state.day);
     const copyDays = state.days
-    console.log(copyDays, index, action);
     if (action === 'delete') {
       copyDays[index].spots++
     } else {

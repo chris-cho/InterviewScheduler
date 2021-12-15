@@ -40,7 +40,7 @@ export default function Application() {
         />
         <hr className="sidebar__separator sidebar--centered" />
         <nav className="sidebar__menu">
-          {state.day && <DayList key="days" days={state.days} day={state.day} setDay={setDay} />}
+          {state.day && <DayList key="days" days={state.days} day={state.day} setDay={setDay}/>}
         </nav>
         <img
           className="sidebar__lhl sidebar--centered"
