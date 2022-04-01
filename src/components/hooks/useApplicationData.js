@@ -35,6 +35,24 @@ export default function useApplicationData(initial) {
       .then(() => setState({ ...state, appointments, days }))
     }
 
+    const editInterview = (id, interview) => {
+      const appointment = {
+        ...state.appointments[id],
+        interview: { ...interview }
+        };
+
+      const appointments = {
+      ...state.appointments,
+      [id]: appointment
+      };
+
+      const days = updateSpots('edit');
+
+      return axios.put(`/api/appointments/` + appointment.id, appointment)
+      .then(() => setState({ ...state, appointments, days }))
+    }
+
+
   const cancelInterview = (id) => {
     const appointment = {
       ...state.appointments[id]
@@ -57,11 +75,12 @@ export default function useApplicationData(initial) {
     const copyDays = state.days
     if (action === 'delete') {
       copyDays[index].spots++
-    } else {
-      copyDays[index].spots--;
+    }
+    if (action === 'add'){
+      copyDays[index].spots--
     }
     return copyDays;
   }
 
-  return { state, setDay, bookInterview, cancelInterview};
+  return { state, setDay, bookInterview, cancelInterview, editInterview};
 }

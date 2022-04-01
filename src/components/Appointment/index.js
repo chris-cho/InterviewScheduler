@@ -22,18 +22,25 @@ export default function Appointment(props){
   const ERROR_SAVE = "ERROR_SAVE";
   const EDIT = "EDIT";
 
-  function onSave(student, interviewer){
+  function onSave(student, interviewer, type){
       const interview = {
       interviewer,
       student
       }
 
     transition(SAVING);
-
-    props
+    
+    if (mode === EDIT) {
+      props
+      .editInterview(props.id, interview)
+      .then(() => onComplete())
+      .catch((error) => transition(ERROR_SAVE, true))
+    } else {
+      props
       .bookInterview(props.id, interview)
       .then(() => onComplete())
       .catch((error) => transition(ERROR_SAVE, true))
+    }
 }
 
   function onComplete() {
