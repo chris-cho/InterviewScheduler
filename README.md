@@ -22,3 +22,5 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 - react-hooks-testing-library 0.6.0
 - react-scripts 4.0.3
 - react-test-renderer 16.9.0
+- NodeJS 16.13.1
+- NPM 8.5.2
